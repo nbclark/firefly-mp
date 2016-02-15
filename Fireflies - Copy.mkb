@@ -1,0 +1,136 @@
+#!/usr/bin/env i3d_make_build.py
+
+options
+{
+    module_path="$AIRPLAY_ROOT/modules/third_party"
+}
+
+includepath
+{
+    "h"
+}
+
+files
+{
+    (source)
+    Utils.cpp
+    IwJPEG.cpp
+    LiveMaps.cpp
+    Main.cpp
+    MapBackground.cpp
+    MapGame.cpp
+    CoordinateScaler.cpp
+    GameState.cpp
+    IntroGameState.cpp
+    SelectMapGameState.cpp
+    HighScoreGameState.cpp
+    StaticContentGameState.cpp
+    CreateMapGameState.cpp
+    ActiveGameState.cpp
+    MessageBox.cpp
+    TextEntryBox.cpp
+    IGameObject.cpp
+    FireflyGameEngine.cpp
+    PatteRunGameEngine.cpp
+    PongGameEngine.cpp
+    AccelerometerHandler.cpp
+
+    (h)
+    Utils.h
+    Main.h
+    MapBackground.h
+    IGameState.h
+    IGameHandler.h
+    MapGame.h
+    LiveMaps.h
+    CoordinateScaler.h
+    GameState.h
+    IntroGameState.h
+    SelectMapGameState.h
+    HighScoreGameState.h
+    StaticContentGameState.h
+    CreateMapGameState.h
+    ActiveGameState.h
+    MessageBox.h
+    TextEntryBox.h
+    IGameObject.h
+    IFireflyObjects.h
+    IPongObjects.h
+    IPatteRunObjects.h
+    PongGameEngine.h
+    FireflyGameEngine.h
+    PatteRunGameEngine.h
+    IGameEngine.h
+    AccelerometerHandler.h
+
+    [Data]
+    (data)
+    GpsGameUI.group
+    main.ui
+    selectmap.ui
+    createmap.ui
+    messagebox.ui
+    styles.ui
+    active.ui
+    selectgame.ui
+    highscore.ui
+    help.ui
+}
+
+subprojects
+{
+    iwui
+    iwhttp
+    iwutil
+    iw2d
+    libjpeg
+    iwgraphics
+    tinyxml
+}
+
+assets
+{
+    (data)
+     splash.jpg
+     cursor.png
+     mark.png
+     1.png
+     2.png
+     3.png
+     level.tga
+     level1.png
+     level2.png
+     level3.png
+     level4.png
+     notfound.png
+     images/pong/paddle.png
+     images/pong/ball.png
+     images/fireflies/firefly_glow.png
+     images/fireflies/firefly_blue.png
+     images/fireflies/user.png
+     images/fireflies/mine.png
+     images/fireflies/dragonfly.png
+     images/fireflies/bolt.png
+     images/fireflies/ring.png
+     images/patterun/patterun.png
+     images/patterun/tile.png
+     gpsgameui.group
+     gpsgameui.group.bin
+}
+
+deployments 
+{ 
+	name='Firefly'
+	copyright='mobileSRC'
+	manufacturer='mobileSRC'
+	version-major=1
+	winmobile-install-folder='mobileSRC'
+	iphone-icon='data/icon.png'
+	iphone-splash='data/splash.jpg'
+	itunes-artwork='data/itunes.png'
+	iphone-appid='com.mobilesrc.fireflies'
+	iphone-provisioning-profile=Fireflies_Release.mobileprovision
+	iphone-region='US'
+	iphone-prerendered-icon='0'
+
+} 

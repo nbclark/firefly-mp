@@ -1,0 +1,147 @@
+#!/usr/bin/env i3d_make_build.py
+
+options
+{
+    module_path="$AIRPLAY_ROOT/modules/third_party"
+    app-icf="data/app-wave2.icf"
+}
+
+includepath
+{
+    "h"
+}
+
+files
+{
+    (source)
+    Utils.cpp
+    IwJPEG.cpp
+    LiveMaps.cpp
+    Main.cpp
+    MapBackground.cpp
+    MapGame.cpp
+    CoordinateScaler.cpp
+    GameState.cpp
+    IntroGameState.cpp
+    SelectGameGameState.cpp
+    SelectMapGameState.cpp
+    HighScoreGameState.cpp
+    StaticContentGameState.cpp
+    CreateMapGameState.cpp
+    ActiveGameState.cpp
+    MessageBox.cpp
+    TextEntryBox.cpp
+    IGameObject.cpp
+    FireflyGameEngine.cpp
+    AccelerometerHandler.cpp
+    Main-Wave2.cpp
+    IwHTTPQueue.cpp
+    IwMultiplayerHandler.cpp
+    IwNotificationHandler.cpp
+	
+    (h)
+    Utils.h
+    Main.h
+    MapBackground.h
+    IGameState.h
+    IGameHandler.h
+    MapGame.h
+    LiveMaps.h
+    CoordinateScaler.h
+    GameState.h
+    IntroGameState.h
+    SelectGameGameState.h
+    SelectMapGameState.h
+    HighScoreGameState.h
+    StaticContentGameState.h
+    CreateMapGameState.h
+    ActiveGameState.h
+    MessageBox.h
+    TextEntryBox.h
+    IGameObject.h
+    IFireflyObjects.h
+    FireflyGameEngine.h
+    IGameEngine.h
+    AccelerometerHandler.h
+    IwHTTPQueue.h
+    IwMultiplayerHandler.h
+    IwNotificationHandler.h
+
+    [Data]
+    (data)
+    GpsGameUI-wave2.group
+    main.ui
+    selectmap.ui
+    createmap.ui
+    messagebox.ui
+    styles.ui
+    active.ui
+    selectgame.ui
+    highscore.ui
+    help.ui
+    pause.ui
+    IwUIStyles.itx
+}
+
+subprojects
+{
+    iwui
+    iwhttp
+    iwutil
+    iw2d
+    libjpeg
+    iwgraphics
+    tinyxml
+}
+
+assets
+{
+    (data)
+     splash-wave2.jpg
+     cursor.png
+     mark.png
+     1.png
+     2.png
+     3.png
+     level.tga
+     level1.png
+     level2.png
+     level3.png
+     level4.png
+     level5.png
+     level6.png
+     level7.png
+     loading.png
+     notfound.png
+     gpsgameui-wave2.group
+     gpsgameui-wave2.group.bin
+}
+
+deployments 
+{ 
+	name='Firefly MP'
+	copyright='mobileSRC'
+	manufacturer='mobileSRC'
+	version-major=2
+	winmobile-install-folder='mobileSRC'
+	iphone-icon='data/icon.png'
+	iphone-splash='data/splash.jpg'
+	itunes-artwork='data/itunes.png'
+	iphone-appid='com.mobilesrc.fireflymp'
+	iphone-region='US'
+	winmobile-icon=data/icon.ico
+	winmobile-icon16=data/icon16.ico
+	winmobile-icon32=data/icon32.ico
+	winmobile-icon48=data/icon48.ico
+	winmobile-icon64=data/icon64.ico
+	iphone-icon-ipad=data/icon-ipad.png
+	bada-appid='6y7ep984a3'
+	bada-appsecret='A7A92DCEE1C1C9463C5B3C8600E6DE17'
+	bada-icon=data/icon-bada.png
+	bada-manifest=data/20101202_manifest-wave2.xml
+	bada-splash=data/splash-wave2.jpg
+	iphone-icon-high-res=data/iphone-hires.png
+	iphone-provisioning-profile=Firefly_MP_Distrubution.mobileprovision
+	iphone-sign-for-distribution='1'
+
+} 

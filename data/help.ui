@@ -1,0 +1,588 @@
+CIwUIElement 
+{
+	name "helpPanel"
+	updatable true
+	CIwUIElement 
+	{
+		name "Base"
+		updatable true
+		CIwUILayoutVertical 
+		{
+			name ""
+			sizeToSpace true
+			element 
+			{
+				name "Top"
+			}
+			element 
+			{
+				name "Shadow"
+			}
+			element 
+			{
+				name "Middle"
+			}
+		}
+		CIwUIImage 
+		{
+			name "Shadow"
+			texture "titleBarBot"
+			border  { 6 0 }
+			sizeMin  { 0 5 }
+		}
+		CIwUIButton
+		{
+			name "Top"
+			OnButtonClick  { "StaticContentGameState::OnClickBack" }
+			style	<titlebutton>
+			
+			CIwUIElement 
+			{
+				name "Base_1"
+				CIwUILabel 
+				{
+					name "ButtonQuit"
+					style	<mapbutton>
+					colour { 0 0 0 105 }
+					textColour { 255 255 255 255 }
+					caption ""
+					//font	font_large
+					sizeMin  { 32 32 }
+					sizeMax  { -1 -1 }
+					sizeHint  { 64 64 }
+
+					CIwUIImage
+					{
+						name "img"
+						sizeToContent false
+						texture "back"
+						sizeMin  { 32 32 }
+						sizeMax	{ 64 64 }
+						sizeHint  { 64 64 }
+						aspectRatio { 1 1 }
+					}
+					CIwUILayout 
+					{
+						name ""
+						element 
+						{
+							name "img"
+							alignH "centre"
+							alignV "middle"
+						}
+					}
+				}
+				CIwUILabel
+				{
+					name "TitleLabel"
+					style <label_medium>
+					colour { 0 0 0 105 }
+					textColour { 255 255 255 255 }
+					sizeMin  { 0 35 }
+					sizeMax  { -1 -1 }
+					sizeHint  { 600 64 }
+					clipped true
+					sizeToContent false
+					caption "Firefly Help"
+					oneLine false
+					margin  { 8 0 }
+					//font	font_large
+					OnButtonClick  { "HighScoreGameState::OnClickBack" }
+				}
+				CIwUILayoutGrid 
+				{
+					name ""
+					column { }
+					column { }
+					row { }
+					sizeToSpace true
+					element 
+					{
+						name "TitleLabel"
+						alignH "left"
+						alignV "middle"
+						row 0
+						column 0
+					}
+					element 
+					{
+						name "ButtonQuit"
+						alignH "right"
+						alignV "middle"
+						row 0
+						column 1
+					}
+				}
+			}
+			CIwUILayout 
+			{
+				name ""
+				sizeToSpace true
+				element 
+				{
+					name "Base_1"
+					border  { 0 0 }
+					alignV "middle"
+				}
+			}
+		}
+		CIwUIElement 
+		{
+			name "Middle"
+			updatable true
+			CIwUIElement 
+			{
+				name "MiddleLayer"
+				updatable true
+				CIwUIScrollableView 
+				{
+					name "Scores"
+					wrapLeft "none"
+					wrapRight "none"
+					wrapUp "none"
+					wrapDown "none"
+					updatable true
+					clipped true
+					CIwUIFocusHandlerTab 
+					{
+						name ""
+					}
+					CIwUIButton
+					{
+						name "HelpObjective"
+						style <helpbutton>
+						sizeMax { -1 -1 }
+						
+						CIwUILabel
+						{
+							name "Objective"
+							style <label_huge>
+							sizeHint  { -1 -1 }
+							clipped false
+							sizeToContent true
+							caption "Firefly Objective"
+							oneLine false
+						}
+						CIwUIImage
+						{
+							name "Image"
+							texture "logo"
+							aspectRatio { 1 1 }
+							sizeMax  { 32 32 }
+							sizeMin  { 32 32 }
+						}
+						CIwUILabel
+						{
+							name "Label"
+							style <label_large>
+							sizeHint  { -1 -1 }
+							sizeMax { -1 -1 }
+							clipped false
+							sizeToContent true
+							caption "The object of Firefly is to gain as many points as possible, in the shortest amount of time."
+							oneLine false
+						}
+						CIwUILayoutGrid 
+						{
+							name ""
+							sizeToSpace true
+							
+							column { }
+							column { }
+							
+							row { }
+							row { }
+							
+							element 
+							{
+								name "Objective"
+								alignH "left"
+								alignV "top"
+								column 1
+								border { 0 5 }
+							}
+							element 
+							{
+								name "Image"
+								alignH "left"
+								alignV "top"
+								column 0
+								row 0
+								rowSpan 2
+								border { 10 10 }
+							}
+							element 
+							{
+								name "Label"
+								alignH "left"
+								alignV "middle"
+								row 1
+								column 1
+								border { 0 5 }
+							}
+						}
+					}
+					CIwUIButton
+					{
+						name "HelpControls"
+						style <helpbutton>
+						sizeMax { -1 -1 }
+						
+						CIwUILabel
+						{
+							name "Objective"
+							style <label_huge>
+							sizeHint  { -1 -1 }
+							clipped false
+							sizeToContent true
+							caption "Controls"
+							oneLine false
+						}
+						CIwUIImage
+						{
+							name "Image"
+							texture "logo"
+							aspectRatio { 1 1 }
+							sizeMax  { 32 32 }
+							sizeMin  { 32 32 }
+						}
+						CIwUILabel
+						{
+							name "Label"
+							style <label_large>
+							sizeHint  { -1 -1 }
+							sizeMax { -1 -1 }
+							clipped false
+							sizeToContent true
+							caption "MobileSrc RunAway games use an innovative input method.\n\nMap a field, such as a soccer field, by selecting 4 corners.  Your movement within this field (using GPS) will now move your character on the screen."
+							oneLine false
+						}
+						CIwUILayoutGrid 
+						{
+							name ""
+							sizeToSpace true
+							
+							column { }
+							column { }
+							
+							row { }
+							row { }
+							
+							element 
+							{
+								name "Objective"
+								alignH "left"
+								alignV "top"
+								column 1
+								border { 0 5 }
+							}
+							element 
+							{
+								name "Image"
+								alignH "left"
+								alignV "top"
+								column 0
+								row 0
+								rowSpan 2
+								border { 10 10 }
+							}
+							element 
+							{
+								name "Label"
+								alignH "left"
+								alignV "middle"
+								row 1
+								column 1
+								border { 0 5 }
+							}
+						}
+					}
+					CIwUIButton
+					{
+						name "HelpFirefly"
+						style <helpbutton>
+						
+						CIwUIImage
+						{
+							name "Image"
+							texture "firefly_glow"
+							aspectRatio { 1 1 }
+							sizeMin  { 32 32 }
+							sizeMax  { 32 32 }
+						}
+						CIwUILabel
+						{
+							name "Label"
+							style <label_large>
+							sizeHint  { -1 -1 }
+							clipped false
+							sizeToContent true
+							caption "Capture fireflies to gain points. Fireflies may only be captured when glowing."
+							oneLine false
+						}
+						CIwUILayoutGrid 
+						{
+							name ""
+							sizeToSpace true
+							
+							column { }
+							column { }
+							
+							row { }
+							
+							element 
+							{
+								name "Image"
+								alignH "left"
+								alignV "middle"
+								column 0
+								border { 10 10 }
+							}
+							element 
+							{
+								name "Label"
+								alignH "left"
+								alignV "middle"
+								column 1
+								border { 0 10 }
+							}
+						}
+					}
+					CIwUIButton
+					{
+						name "HelpBolt"
+						style <helpbutton>
+						
+						CIwUIImage
+						{
+							name "Image"
+							texture "bolt"
+							aspectRatio { 1 1 }
+							sizeMin  { 32 32 }
+							sizeMax  { 32 32 }
+						}
+						CIwUILabel
+						{
+							name "Label"
+							style <label_large>
+							sizeHint  { -1 -1 }
+							clipped false
+							sizeToContent true
+							caption "Shake your phone to send out a shock wave and stun the fireflies.  The harder the shake, the bigger the wave."
+							oneLine false
+						}
+						CIwUILayoutGrid 
+						{
+							name ""
+							sizeToSpace true
+							
+							column { }
+							column { }
+							
+							row { }
+							
+							element 
+							{
+								name "Image"
+								alignH "left"
+								alignV "middle"
+								column 0
+								border { 10 10 }
+							}
+							element 
+							{
+								name "Label"
+								alignH "left"
+								alignV "middle"
+								column 1
+								border { 0 10 }
+							}
+						}
+					}
+					CIwUIButton
+					{
+						name "HelpMine"
+						style <helpbutton>
+						
+						CIwUIImage
+						{
+							name "Image"
+							texture "mine"
+							aspectRatio { 1 1 }
+							sizeMax  { 24 24 }
+							sizeMin  { 24 24 }
+						}
+						CIwUILabel
+						{
+							name "Label"
+							style <label_large>
+							sizeHint  { -1 -1 }
+							clipped false
+							sizeToContent true
+							caption "Be careful and avoid the mines. They will cause you to lose points."
+							oneLine false
+						}
+						CIwUILayoutGrid 
+						{
+							name ""
+							sizeToSpace true
+							
+							column { }
+							column { }
+							
+							row { }
+							
+							element 
+							{
+								name "Image"
+								alignH "left"
+								alignV "middle"
+								column 0
+								border { 10 10 }
+							}
+							element 
+							{
+								name "Label"
+								alignH "left"
+								alignV "middle"
+								column 1
+								border { 0 10 }
+							}
+						}
+					}
+					CIwUIButton
+					{
+						name "HelpUser"
+						style <helpbutton>
+						
+						CIwUIImage
+						{
+							name "Image"
+							texture "user"
+							aspectRatio { 1 1 }
+							sizeMax  { 32 32 }
+							sizeMin  { 32 32 }
+						}
+						CIwUILabel
+						{
+							name "Label"
+							style <label_large>
+							sizeHint  { -1 -1 }
+							clipped false
+							sizeToContent true
+							caption "This represents your character.  Move around in real life to move your character on the screen."
+							oneLine false
+						}
+						CIwUILayoutGrid 
+						{
+							name ""
+							sizeToSpace true
+							
+							column { }
+							column { }
+							
+							row { }
+							
+							element 
+							{
+								name "Image"
+								alignH "left"
+								alignV "middle"
+								column 0
+								border { 10 10 }
+							}
+							element 
+							{
+								name "Label"
+								alignH "left"
+								alignV "middle"
+								column 1
+								border { 0 10 }
+							}
+						}
+					}
+					CIwUILayoutVertical 
+					{
+						sizeToSpace true
+						element 
+						{
+							name "HelpObjective"
+							alignH "left"
+							alignV "top"
+						}
+						element 
+						{
+							name "HelpControls"
+							alignH "left"
+							alignV "top"
+						}
+						element 
+						{
+							name "HelpUser"
+							alignH "left"
+							alignV "top"
+						}
+						element 
+						{
+							name "HelpFirefly"
+							alignH "left"
+							alignV "top"
+						}
+						element 
+						{
+							name "HelpBolt"
+							alignH "left"
+							alignV "top"
+						}
+						element 
+						{
+							name "HelpDragonFly"
+							alignH "left"
+							alignV "top"
+						}
+						element 
+						{
+							name "HelpMine"
+							alignH "left"
+							alignV "top"
+						}
+					}
+				}
+				CIwUILayout 
+				{
+					name ""
+					sizeToSpace true
+					element 
+					{
+						name "Scores"
+					}
+				}
+			}
+			CIwUILayout 
+			{
+				name ""
+				sizeToSpace true
+				element 
+				{
+					name "TopLayer"
+					alignV "top"
+				}
+				element 
+				{
+					name "MiddleLayer"
+					alignV "top"
+					alignH "left"
+				}
+			}
+		}
+	}
+	CIwUILayout 
+	{
+		name ""
+		sizeToSpace true
+		element 
+		{
+			name "Base"
+		}
+	}
+}

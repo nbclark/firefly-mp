@@ -1,0 +1,67 @@
+include resource_templates.itx
+
+CIwResGroup
+{
+	name "GpsGameUI"
+
+	iwui_style/iwui_style.group { inline true }
+
+	"textures/fireflies-lite.tga"
+	"textures/fireflies.tga"
+	"textures/logo.tga"
+	"textures/logo-off.tga"
+	"textures/connection.tga"
+	"textures/back.tga"
+	"textures/gamebuttonfocus.tga"
+	"textures/gamebutton_up.tga"
+	"textures/gamebutton_down.tga"
+	"textures/introbuttonfocus.tga"
+	"textures/introbutton_up.tga"
+	"textures/introbutton_down.tga"
+	"textures/mapbuttonfocus.tga"
+	"textures/mapbutton_up.tga"
+	"textures/mapbutton_down.tga"
+	"textures/scorebuttonfocus.tga"
+	"textures/scorebutton_up.tga"
+	"textures/scorebutton_down.tga"
+	"textures/helpbuttonfocus.tga"
+	"textures/helpbutton_up.tga"
+	"textures/helpbutton_down.tga"
+	"textures/clearbuttonfocus.tga"
+	"textures/clearbutton_up.tga"
+	"textures/clearbutton_down.tga"
+	"textures/titlebutton_up.tga"
+	"textures/titlebutton_down.tga"
+	"textures/titlebuttonfocus.tga"
+	"textures/mainbackground.tga"
+	textures/titleBar.tga
+	textures/titleBarTop.tga
+	textures/titleBarMid.tga
+	textures/titleBarBot.tga
+	textures/maplogo.tga
+	textures/greyedout.tga
+	textures/delete_item.tga
+	textures/fireflyback.tga
+	
+	images/fireflies/wave2/firefly.tga
+	images/fireflies/wave2/firefly_blue.tga
+	images/fireflies/wave2/firefly_glow.tga
+	images/fireflies/wave2/bonusfirefly.tga
+	images/fireflies/wave2/bonusfirefly_glow.tga
+	images/fireflies/wave2/mine.tga
+	images/fireflies/wave2/bolt.tga
+	images/fireflies/wave2/user.tga
+	images/fireflies/wave2/userB.tga
+
+	"IwUIStyles.itx"
+	"Styles.ui"
+	"SelectGame.ui"
+	"SelectMap.ui"
+	"CreateMap.ui"
+	"Active.ui"
+	"MessageBox.ui"
+	"Pause.ui"
+	"Main.ui"
+	"HighScore.ui"
+	"Help.ui"
+}

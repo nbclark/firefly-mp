@@ -1,0 +1,31 @@
+[S3E]
+MemSize=15485760
+MemSizeDebugDevice=15485760
+iPhoneScaleFactor=200
+
+# These lines specify a splash screen to display while the s3e file is loaded
+SplashscreenBkR=255
+SplashscreenBkG=255
+SplashscreenBkB=255
+Splashscreen=splash-wave2.jpg
+SplashscreenWidth=240
+SplashscreenHeight=400
+FixScreenOrientation=1
+[ResManager]
+ResBuild=1
+
+[GX]
+ScreenOrientAutoHandled=0
+DataCacheSize=1750000
+PolyBufferSize=200000
+VertCacheSize=20000
+NumTPages = 140
+
+[Util]
+MaxAllocationWarning=0
+
+[Trace]
+DEVICE=1
+SOCKET=1
+DEVICE_VERBOSE=1
+SOCKET_VERBOSE=1
